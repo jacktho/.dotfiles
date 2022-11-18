@@ -61,7 +61,7 @@ alias devpi="cd ~/code/peachinsurance.net-svelte && pnpm dev"
 alias lazypi="cd ~/code/peachinsurance.net-svelte && lazygit"
 alias testpi="cd ~/code/peachinsurance.net-svelte && pnpm test"
 
-alias nvimedit="cd ~/.config/nvim && vi"
+alias nvimedit="cd ~/.dotfiles/nvim/.config/nvim && vi"
 alias mine="cd ~/Applications/t-rex-0.24.8-linux && ./eth-hiveon-trex.sh"
 
 # misc aliases
