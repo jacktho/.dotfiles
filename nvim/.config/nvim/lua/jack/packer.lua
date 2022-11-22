@@ -116,4 +116,7 @@ return require("packer").startup(function(use)
 	if packer_bootstrap then
 		require("packer").sync()
 	end
+
+	-- show git changes on the left
+	use("lewis6991/gitsigns.nvim")
 end)
