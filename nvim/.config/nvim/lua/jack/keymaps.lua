@@ -15,8 +15,8 @@ keymap.set("n", "<leader>=", "<C-a>")
 -- Decrement numbers
 keymap.set("n", "<leader>-", "<C-x>")
 
+-- Quicker Write
 keymap.set("n", "<leader>w", ":w<CR>")
-keymap.set("n", "<leader>wq", ":wq<CR>")
 --
 -- Window Splitting
 --
