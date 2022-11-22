@@ -41,7 +41,8 @@ return require("packer").startup(function(use)
 
 	use("chrisbra/Recover.vim")
 
-	use("projekt0n/github-nvim-theme")
+	-- Colorscheme
+	use("folke/tokyonight.nvim")
 
 	use("christoomey/vim-tmux-navigator")
 
@@ -79,9 +80,17 @@ return require("packer").startup(function(use)
 
 	use({
 		"nvim-treesitter/nvim-treesitter",
-		run = ":TSUpdate",
+		run = function()
+			local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
+			ts_update()
+		end,
 	})
 
+	-- auto closing
+	use("windwp/nvim-autopairs")
+	use("windwp/nvim-ts-autotag")
+
+	-- Bottom status bar
 	use({
 		"nvim-lualine/lualine.nvim",
 		requires = { "nvim-tree/nvim-web-devicons", opt = true },
