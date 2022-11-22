@@ -22,33 +22,24 @@ tokyonight.setup({
 	dim_inactive = true, -- dims inactive windows
 	lualine_bold = true, -- When `true`, section headers in the lualine theme will be bold
 	on_highlights = function(hl, c)
-		local prompt = "#2d3149"
 		hl.TelescopeNormal = {
-			bg = c.bg_dark,
 			fg = c.fg_dark,
 		}
 		hl.TelescopeBorder = {
-			bg = c.bg_dark,
 			fg = c.bg_dark,
 		}
-		hl.TelescopePromptNormal = {
-			bg = prompt,
-		}
+		hl.TelescopePromptNormal = {}
 		hl.TelescopePromptBorder = {
-			bg = prompt,
-			fg = prompt,
+			fg = c.bg_dark,
 		}
 		hl.TelescopePromptTitle = {
-			bg = prompt,
-			fg = prompt,
+			fg = c.fg_dark,
 		}
 		hl.TelescopePreviewTitle = {
-			bg = c.bg_dark,
-			fg = c.bg_dark,
+			fg = c.fg_dark,
 		}
 		hl.TelescopeResultsTitle = {
-			bg = c.bg_dark,
-			fg = c.bg_dark,
+			fg = c.fg_dark,
 		}
 	end,
 })
