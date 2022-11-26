@@ -5,6 +5,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Store alsamixer settings
+alsactl -f ~/.config/asound.state restore
+
 # The following lines were added by compinstall
 
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
@@ -29,14 +32,11 @@ export PATH=/opt/firefox-developer:$PATH
 export PATH=~/go/bin:$PATH
 export PATH=~/Applications:$PATH
 
-# nvim
-alias vi="nvim.appimage"
-alias vim="nvim.appimage"
-alias nvim="nvim.appimage"
+alias nv='nvim'
 
 # aliases for peach application
 alias cdpa="cd ~/code/peach-application"
-alias vipa="cd ~/code/peach-application && vi"
+alias vipa="cd ~/code/peach-application && nvim"
 alias nnnpa="cd ~/code/peach-application && nnn"
 alias devpa="cd ~/code/peach-application && pnpm dev"
 alias lazypa="cd ~/code/peach-application && lazygit"
@@ -44,7 +44,7 @@ alias testpa="cd ~/code/peach-application && pnpm test"
 
 # aliases for peach quote 
 alias cdpq="cd ~/code/peach-quote"
-alias vipq="cd ~/code/peach-quote && vi"
+alias vipq="cd ~/code/peach-quote && nvim"
 alias nnnpq="cd ~/code/peach-quote && nnn"
 alias devpq="cd ~/code/peach-quote && pnpm dev"
 alias lazypq="cd ~/code/peach-quote && lazygit"
@@ -52,13 +52,13 @@ alias testpq="cd ~/code/peach-quote && pnpm test"
 
 # aliases for peachinsurance.net
 alias cdpi="cd ~/code/peachinsurance.net-svelte"
-alias vipi="cd ~/code/peachinsurance.net-svelte && vi"
+alias vipi="cd ~/code/peachinsurance.net-svelte && nvim"
 alias nnnpi="cd ~/code/peachinsurance.net-svelte && nnn"
 alias devpi="cd ~/code/peachinsurance.net-svelte && pnpm dev"
 alias lazypi="cd ~/code/peachinsurance.net-svelte && lazygit"
 alias testpi="cd ~/code/peachinsurance.net-svelte && pnpm test"
 
-alias nvimedit="cd ~/.config/nvim && vi"
+alias nvimedit="cd ~/.dotfiles/nvim/.config/nvim && nvim"
 alias mine="cd ~/Applications/t-rex-0.24.8-linux && ./eth-hiveon-trex.sh"
 
 # misc aliases
