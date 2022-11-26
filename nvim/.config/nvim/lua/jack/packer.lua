@@ -39,11 +39,13 @@ return require("packer").startup(function(use)
 	use("hrsh7th/cmp-path")
 	use("github/copilot.vim")
 
+	-- Handle swap files better
 	use("chrisbra/Recover.vim")
 
 	-- Colorscheme
 	use("folke/tokyonight.nvim")
 
+	-- Move with ctrl + hjkl
 	use("christoomey/vim-tmux-navigator")
 
 	-- snippets
@@ -58,11 +60,17 @@ return require("packer").startup(function(use)
 	})
 	use("jayp0521/mason-null-ls.nvim")
 
+	-- Find stuff easier
 	use({
 		"nvim-telescope/telescope-fzf-native.nvim",
 		run = "make",
 	})
+	use({
+		"nvim-telescope/telescope.nvim",
+		requires = { { "nvim-lua/plenary.nvim" } },
+	})
 
+	-- File Explorer
 	use({
 		"nvim-tree/nvim-tree.lua",
 		requires = {
@@ -71,13 +79,7 @@ return require("packer").startup(function(use)
 		tag = "nightly", -- optional, updated every week. (see issue #1193)
 	})
 
-	use({
-		"nvim-telescope/telescope.nvim",
-		requires = { { "nvim-lua/plenary.nvim" } },
-	})
-
-	use("honza/vim-snippets")
-
+	-- Better highlighting
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = function()
