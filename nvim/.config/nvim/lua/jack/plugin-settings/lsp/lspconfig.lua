@@ -1,6 +1,5 @@
 local lspconfig = require("lspconfig")
 local cmp_nvim_lsp = require("cmp_nvim_lsp")
-local typescript = require("typescript")
 
 local keymap = vim.keymap
 
