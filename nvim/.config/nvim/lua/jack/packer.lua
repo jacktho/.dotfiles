@@ -45,8 +45,11 @@ return require("packer").startup(function(use)
 	-- Colorscheme
 	use("folke/tokyonight.nvim")
 
-	-- Move with ctrl + hjkl
+	-- Move cursor with ctrl + hjkl
 	use("christoomey/vim-tmux-navigator")
+
+	-- Move windows better
+	use("sindrets/winshift.nvim")
 
 	-- snippets
 	use("L3MON4D3/LuaSnip")
