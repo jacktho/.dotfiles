@@ -6,16 +6,9 @@ lualine.setup({
 		theme = "tokyonight",
 	},
 	sections = {
-		lualine_c = {
-			{
-				"filename",
-				file_status = true,
-				path = 1,
-				shorting_target = 110,
-			},
-		},
+		lualine_c = { "%{expand('%:p:h:t')}/%t" },
 	},
 	inactive_sections = {
-		lualine_c = { { "filename", path = 1 } },
+		lualine_c = { "%{expand('%:p:h:t')}/%t" },
 	},
 })
