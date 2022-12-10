@@ -34,19 +34,32 @@ keymap.set("n", "<leader>se", "<C-w>=")
 keymap.set("n", "<leader>sc", ":close<CR>")
 
 -- Move window to left
-keymap.set("n", "<A-h>", ":WinShift left<CR>")
+-- keymap.set("n", "<A-h>", ":WinShift left<CR>")
 
 -- Move window to right
-keymap.set("n", "<A-l>", ":WinShift right<CR>")
+-- keymap.set("n", "<A-l>", ":WinShift right<CR>")
 
 -- Move window down
-keymap.set("n", "<A-j>", ":WinShift down<CR>")
+-- keymap.set("n", "<A-j>", ":WinShift down<CR>")
 
 -- Move window up
-keymap.set("n", "<A-k>", ":WinShift up<CR>")
+-- keymap.set("n", "<A-k>", ":WinShift up<CR>")
 
 -- Move Windows
-keymap.set("n", "<leader>sw", ":WinShift<CR>")
+keymap.set("n", "<a-cr>", ":WinShift<CR>")
+
+-- Move focus left
+keymap.set("n", "<a-h>", ":TmuxNavigateLeft<CR>")
+
+-- Move focus right
+keymap.set("n", "<a-l>", ":TmuxNavigateRight<CR>")
+
+-- Move focus down
+keymap.set("n", "<a-j>", ":TmuxNavigateDown<CR>")
+
+-- Move focus up
+keymap.set("n", "<a-k>", ":TmuxNavigateUp<CR>")
+
 --
 -- Manage Tabs
 --
