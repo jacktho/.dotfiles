@@ -2,6 +2,9 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
+-- Faster search and replace
+keymap.set("n", "<leader>rf", ":%s/")
+
 -- Clear things like highlights
 keymap.set("n", "\\<leader>", ":nohl<CR>")
 
@@ -84,9 +87,6 @@ keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 --
 -- Nvim Misc
 --
-
--- Source init.vim
-keymap.set("n", "<leader>rs", ":source $MYVIMRC<CR>")
 
 -- telescrope
 keymap.set("n", "<C-p>", ":Telescope find_files<CR>")
