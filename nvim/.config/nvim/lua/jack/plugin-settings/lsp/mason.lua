@@ -9,7 +9,7 @@ mason_lspconfig.setup({
 		"dockerls",
 		"html",
 		"jsonls",
-		"sumneko_lua",
+		"lua_ls",
 		"yamlls",
 		"tsserver",
 		"tailwindcss",
