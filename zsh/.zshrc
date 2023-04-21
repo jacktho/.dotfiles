@@ -60,6 +60,14 @@ alias devpi="cd ~/code/peachinsurance.net-svelte && pnpm dev"
 alias lazypi="cd ~/code/peachinsurance.net-svelte && lazygit"
 alias testpi="cd ~/code/peachinsurance.net-svelte && pnpm test"
 
+# aliases for jackthompson.dev
+alias cdjt="cd ~/code/jackthompson.dev"
+alias vijt="cd ~/code/jackthompson.dev && nvim"
+alias nnnjt="cd ~/code/jackthompson.dev && nnn"
+alias devjt="cd ~/code/jackthompson.dev && pnpm dev"
+alias lazyjt="cd ~/code/jackthompson.dev && lazygit"
+alias testjt="cd ~/code/jackthompson.dev && pnpm test"
+
 alias nvimedit="cd ~/.dotfiles/nvim/.config/nvim && nvim"
 alias mine="cd ~/Applications/t-rex-0.24.8-linux && ./eth-hiveon-trex.sh"
 
