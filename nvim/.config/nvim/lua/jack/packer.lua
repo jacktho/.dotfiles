@@ -116,12 +116,47 @@ return require("packer").startup(function(use)
 			require("Comment").setup()
 		end,
 	})
+	-- show git changes on the left
+	use("lewis6991/gitsigns.nvim")
+
+	-- Help with hotkeys
+	use({
+		"folke/which-key.nvim",
+		config = function()
+			vim.o.timeout = true
+			vim.o.timeoutlen = 300
+			require("which-key").setup({
+				-- your configuration comes here
+				-- or leave it empty to use the default settings
+				-- refer to the configuration section below
+			})
+		end,
+	})
+
+	-- tailwind colors
+	use({
+		"roobert/tailwindcss-colorizer-cmp.nvim",
+		-- optionally, override the default options:
+		config = function()
+			require("tailwindcss-colorizer-cmp").setup({
+				color_square_width = 2,
+			})
+		end,
+	})
+
+	use({
+		"NvChad/nvim-colorizer.lua",
+		config = function()
+			require("colorizer").setup({
+				user_default_options = {
+					tailwind = "lsp", -- Enable tailwind colors
+				},
+			})
+		end,
+	})
 
 	-- Automatically setup plugins after auto installing/cloning packer
 	if packer_bootstrap then
 		require("packer").sync()
 	end
-
-	-- show git changes on the left
-	use("lewis6991/gitsigns.nvim")
 end)
