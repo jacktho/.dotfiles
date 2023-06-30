@@ -68,6 +68,14 @@ alias devjt="cd ~/code/jackthompson.dev && pnpm dev"
 alias lazyjt="cd ~/code/jackthompson.dev && lazygit"
 alias testjt="cd ~/code/jackthompson.dev && pnpm test"
 
+# aliases for peach-manage
+alias cdpm="cd ~/code/peach-manage"
+alias vipm="cd ~/code/peach-manage && nvim"
+alias nnnpm="cd ~/code/peach-manage && nnn"
+alias devpm="cd ~/code/peach-manage && pnpm dev"
+alias lazypm="cd ~/code/peach-manage && lazygit"
+alias testpm="cd ~/code/peach-manage && pnpm test"
+
 alias nvimedit="cd ~/.dotfiles/nvim/.config/nvim && nvim"
 alias mine="cd ~/Applications/t-rex-0.24.8-linux && ./eth-hiveon-trex.sh"
 
