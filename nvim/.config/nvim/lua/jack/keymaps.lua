@@ -95,3 +95,6 @@ keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>")
 keymap.set("n", "<leader>fb", ":Telescope buffers<CR>")
 keymap.set("n", "<leader>fh", ":Telescope help_tags<CR>")
 keymap.set("n", "<leader>fc", ":Telescope grep_string<CR>")
+
+-- setup mapping to call :LazyGit
+keymap.set("n", "<leader>gg", ":LazyGit<CR>")

@@ -82,6 +82,15 @@ return require("packer").startup(function(use)
 		tag = "nightly", -- optional, updated every week. (see issue #1193)
 	})
 
+	-- lazygit
+	use({
+		"kdheepak/lazygit.nvim",
+		-- optional for floating window border decoration
+		requires = {
+			"nvim-lua/plenary.nvim",
+		},
+	})
+
 	-- Better highlighting
 	use({
 		"nvim-treesitter/nvim-treesitter",
