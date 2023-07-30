@@ -23,7 +23,6 @@ local packer_bootstrap = ensure_packer()
 return require("packer").startup(function(use)
 	-- Packer can manage itself
 	use("wbthomason/packer.nvim")
-
 	-- LSP server stuff
 	use("williamboman/mason.nvim")
 	use("williamboman/mason-lspconfig.nvim")
@@ -91,13 +90,18 @@ return require("packer").startup(function(use)
 		},
 	})
 
+	--- nnn
+	use({
+		"luukvbaal/nnn.nvim",
+		config = function()
+			require("nnn").setup()
+		end,
+	})
+
 	-- Better highlighting
 	use({
 		"nvim-treesitter/nvim-treesitter",
-		run = function()
-			local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
-			ts_update()
-		end,
+		run = ":TSUpdate",
 	})
 
 	-- auto closing
@@ -163,6 +167,9 @@ return require("packer").startup(function(use)
 			})
 		end,
 	})
+
+	-- Game
+	use("ThePrimeagen/vim-be-good")
 
 	-- Automatically setup plugins after auto installing/cloning packer
 	if packer_bootstrap then
