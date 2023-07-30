@@ -82,7 +82,7 @@ keymap.set("n", "<leader>tp", ":tabprevious<CR>")
 --
 -- Nvim-Tree
 --
-keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
+-- keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
 --
 -- Nvim Misc
@@ -97,4 +97,7 @@ keymap.set("n", "<leader>fh", ":Telescope help_tags<CR>")
 keymap.set("n", "<leader>fc", ":Telescope grep_string<CR>")
 
 -- setup mapping to call :LazyGit
-keymap.set("n", "<leader>gg", ":LazyGit<CR>")
+keymap.set("n", "<leader>lg", ":LazyGit<CR>")
+
+-- :NnnPicker %:p:h
+keymap.set("n", "<leader>e", ":NnnPicker %:p:h<CR>")
