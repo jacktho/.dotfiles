@@ -16,6 +16,7 @@ zstyle ':completion:*' completer _expand _complete _ignored _correct _approximat
 zstyle ':completion:*' max-errors 2 numeric
 zstyle :compinstall filename '/home/jack/.zshrc'
 
+
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
@@ -79,6 +80,13 @@ alias testpm="cd ~/code/peach-manage && pnpm test"
 alias nvimedit="cd ~/.dotfiles/nvim/.config/nvim && nvim"
 alias mine="cd ~/Applications/t-rex-0.24.8-linux && ./eth-hiveon-trex.sh"
 
+# aliases for supabase-dev
+alias cdsb="cd ~/code/supabase-dev"
+alias visb="cd ~/code/supabase-dev && nvim"
+alias nnnsb="cd ~/code/supabase-dev && nnn"
+alias lazysb="cd ~/code/supabase-dev && lazygit"
+alias devdumpsb="cd ~/code/supabase-dev && supabase db dump -f supabase/seed.sql --data-only --db-url postgresql://postgres:postgres@localhost:54322/postgres"
+
 # misc aliases
 alias cdc="cd ~/code && ls"
 alias reboot-windows="systemctl reboot --boot-loader-entry=auto-windows"
@@ -106,3 +114,30 @@ lg()
 export PNPM_HOME="/home/jack/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/jack/.miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/jack/.miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/jack/.miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/jack/.miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+# Auto activate h2ogpt
+conda activate h2ogpt
+
+if [ -z "$LD_LIBRARY_PATH" ]; then
+    export LD_LIBRARY_PATH=/usr/local/cuda/lib64/
+else
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64/
+fi
+export BNB_CUDA_VERSION=122
+export CUDA_HOME=/usr/local/cuda
+export PATH=$PATH:/usr/local/cuda/bin/
