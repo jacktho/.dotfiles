@@ -6,9 +6,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Store alsamixer settings
-if (( $+commands[alsactl] )); then
-  alsactl -f ~/.config/asound.state restore
-fi
+# if (( $+commands[alsactl] )); then
+#  alsactl -f ~/.config/asound.state restore
+#fi
 
 # The following lines were added by compinstall
 
@@ -80,12 +80,12 @@ alias testpm="cd ~/code/peach-manage && pnpm test"
 alias nvimedit="cd ~/.dotfiles/nvim/.config/nvim && nvim"
 alias mine="cd ~/Applications/t-rex-0.24.8-linux && ./eth-hiveon-trex.sh"
 
-# aliases for supabase-dev
-alias cdsb="cd ~/code/supabase-dev"
-alias visb="cd ~/code/supabase-dev && nvim"
-alias nnnsb="cd ~/code/supabase-dev && nnn"
-alias lazysb="cd ~/code/supabase-dev && lazygit"
-alias devdumpsb="cd ~/code/supabase-dev && supabase db dump -f supabase/seed.sql --data-only --db-url postgresql://postgres:postgres@localhost:54322/postgres"
+# aliases for peach-supabase
+alias cdsb="cd ~/code/peach-supabase"
+alias visb="cd ~/code/peach-supabase && nvim"
+alias nnnsb="cd ~/code/peach-supabase && nnn"
+alias lazysb="cd ~/code/peach-supabase && lazygit"
+alias devdumpsb="cd ~/code/peach-supabase && supabase db dump -f supabase/seed.sql --data-only --db-url postgresql://postgres:postgres@localhost:54322/postgres"
 
 # misc aliases
 alias cdc="cd ~/code && ls"
@@ -95,7 +95,6 @@ alias reboot-windows="systemctl reboot --boot-loader-entry=auto-windows"
 export PATH=/home/jack/.fnm:$PATH
 eval "`fnm env`"
 
-source ~/.powerlevel10k/powerlevel10k.zsh-theme
 
 # Lazygit
 lg()
@@ -141,3 +140,5 @@ fi
 export BNB_CUDA_VERSION=122
 export CUDA_HOME=/usr/local/cuda
 export PATH=$PATH:/usr/local/cuda/bin/
+
+source ~/.powerlevel10k/powerlevel10k.zsh-theme
