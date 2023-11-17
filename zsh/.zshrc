@@ -35,7 +35,7 @@ export PATH=/opt/firefox-developer:$PATH
 export PATH=~/go/bin:$PATH
 export PATH=~/Applications:$PATH
 
-alias nv='nvim'
+alias nvid="neovide.AppImage"
 
 # aliases for peach application
 alias cdpa="cd ~/code/peach-application"
